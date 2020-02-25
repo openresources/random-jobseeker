@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center pt-10 h-screen">
+  <div class="flex flex-col items-center py-10">
     <div
       class="flex flex-col items-center w-3/4 lg:w-1/3 bg-gray-800 py-6 text-gray-300"
     >
@@ -15,7 +15,7 @@
         srcset=""
         width="125"
       />
-      <p class="text-2xl">
+      <p class="sm:text-lg md:text-2xl px-2">
         {{ jobSeeker.profile.title }} {{ jobSeeker.profile.firstName }}
         {{ jobSeeker.profile.lastName }}
       </p>
@@ -65,7 +65,7 @@
     </nav>
     <div class="bg-white rounded overflow-hidden shadow-lg p-6 w-3/4 lg:w-1/3">
       <div class="bg-white">
-        <div class="h-64">
+        <div>
           <div v-if="tabCurrent == 1" id="tab1" class="tab-pane min-h-full">
             <dl>
               <dt>Profile</dt>

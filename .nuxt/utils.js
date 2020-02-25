@@ -132,7 +132,7 @@ export async function setContext (app, context) {
 
       payload: context.payload,
       error: context.error,
-      base: '/random-jobseeker/',
+      base: '/',
       env: {"BASE_URL":"http://localhost:3000"}
     }
     // Only set once
