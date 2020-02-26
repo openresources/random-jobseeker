@@ -5,12 +5,7 @@
     >
       <img
         class="rounded-full"
-        :src="
-          'https://avatar-api.org/avatar.svg?name=' +
-            jobSeeker.profile.firstName +
-            ' ' +
-            jobSeeker.profile.lastName
-        "
+        :src="'https://www.gravatar.com/avatar/' + hashedEmail + '?d=robohash&s=125'"
         alt=""
         srcset=""
         width="125"
@@ -127,6 +122,9 @@
 </template>
 
 <script>
+
+import md5 from 'crypto-js/md5';
+
 export default {
   data() {
     return {
@@ -142,17 +140,14 @@ export default {
 
     const jobSeeker = randomJobSeeker.results[0]
 
-    return { jobSeeker }
+    const hashedEmail = md5(jobSeeker.profile.email).toString()
+    
+    return { jobSeeker, hashedEmail }
   },
 
   methods: {
     toggleTab(tab) {
       this.tabCurrent = tab
-      console.log(this.tabCurrent)
-
-      if (this.tabCurrent == 2) {
-        console.log('eureka')
-      }
     }
   }
 }
