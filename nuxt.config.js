@@ -1,11 +1,22 @@
 
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/random-jobseeker/'
+  }
+} : {}
+
 export default {
   mode: 'universal',
+
+  ...routerBase,
+
   /*
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    // title: process.env.npm_package_name || '',
+    title: "Random Jobseeker",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,6 +34,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/sass/app.scss'
   ],
   /*
   ** Plugins to load before mounting the App
