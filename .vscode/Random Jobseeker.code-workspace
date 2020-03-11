@@ -4,5 +4,23 @@
 			"path": "/mnt/c/Users/evian/Projects/Code/openresources/random-jobseeker.test"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#f1ae90",
+			"activityBar.activeBackground": "#f1ae90",
+			"activityBar.activeBorder": "#128e38",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#128e38",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"titleBar.activeBackground": "#eb8d63",
+			"titleBar.inactiveBackground": "#eb8d6399",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveForeground": "#15202b99",
+			"statusBar.background": "#eb8d63",
+			"statusBarItem.hoverBackground": "#e56c36",
+			"statusBar.foreground": "#15202b"
+		},
+		"peacock.remoteColor": "#eb8d63"
+	}
 }
