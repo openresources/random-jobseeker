@@ -2,9 +2,12 @@
 export default {
   mode: 'universal',
 
+  buildDir: 'nuxt-dist',
+
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
+
 
   /*
   ** Headers of the page
